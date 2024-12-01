@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notatki z Programowania</title>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Verdana;
+            background-color: #f8f9fa;
+            color: #000;
+            transition: background-color 0.3s, color 0.3s;
+            overflow-x: hidden; 
+            
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+        }
+        .content-section {
+            margin-top: 90px; 
+        }
+        .card {
+            margin-bottom: 30px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .footer {
+            width: 100%;
+        }
+
+        .dark-mode {
+            background-color: #3b3b3b;
+            color: white;
+        }
+        .dark-mode .card {
+            background-color: #495057;
+            color: white;
+        }
+        .dark-mode .navbar {
+            background-color: #212529;
+        }
+        .dark-mode .footer {
+            background-color: #212529;
+        }
+
+        #toggleDarkMode {
+            position: fixed;
+            bottom: 50px;
+            right: 20px;
+            background-color: #343a40;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            padding: 10px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        #toggleDarkMode:hover {
+            background-color: #555;
+        }
+
+::-webkit-scrollbar {
+    width: 12px; 
+    height: 12px; 
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #cccccc; 
+    border: 2px solid #ffffff; 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555; 
+}
+
+::-webkit-scrollbar-track {
+    background-color: #3f3f3f; 
+}
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Przełącz nawigację">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#svg"><i class="fas fa-vector-square"></i> SVG</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#html-css"><i class="fab fa-html5"></i> HTML+CSS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#canvas"><i class="fas fa-paint-brush"></i> Canvas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#js"><i class="fab fa-js-square"></i> JavaScript</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#php"><i class="fab fa-php"></i> PHP</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container content-section">
+        <section id="svg" class="card" data-aos="fade-down" data-aos-duration="3000" data-aos-duration="3000">
+            <div class="card-header bg-primary text-white">SVG</div>
+            <div class="card-body">
+                <h5 class="card-title">Skalowalna Grafika Wektorowa</h5>
+                <p class="card-text">SVG to format grafiki wektorowej do tworzenia dwuwymiarowych obrazów. Przykład składni SVG:</p>
+                <pre><code>&lt;svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" /&gt;
+&lt;/svg&gt;</code></pre>
+                <p>SVG pozwala na manipulowanie grafiką za pomocą stylów CSS i skryptów JavaScript, co czyni go bardzo elastycznym narzędziem do pracy z grafiką na stronach internetowych.</p>
+                <p><strong>Wybrane atrybuty SVG:</strong></p>
+                <ul>
+                    <li><code>width</code>, <code>height</code> - określenie wymiarów rysunku.</li>
+                    <li><code>fill</code> - kolor wypełnienia elementu.</li>
+                    <li><code>stroke</code>, <code>stroke-width</code> - kolor i grubość obramowania.</li>
+                    <li><code>cx</code>, <code>cy</code>, <code>r</code> - współrzędne środka i promień okręgu.</li>
+                    <li><code>viewBox</code> - definiuje obszar widoczny grafiki.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="html-css" class="card" data-aos="fade-up" data-aos-duration="3000" data-aos-duration="3000">
+            <div class="card-header bg-success text-white">HTML+CSS</div>
+            <div class="card-body">
+                <h5 class="card-title">HTML i CSS</h5>
+                <p class="card-text">HTML definiuje strukturę strony internetowej, a CSS odpowiada za jej wygląd. Przykład:</p>
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      body { background-color: lightblue; }
+      h1 { color: navy; font-size: 24px; }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Witaj, Świecie!&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                <p>HTML wykorzystuje tagi do tworzenia elementów, takich jak nagłówki, akapity czy obrazy, a CSS umożliwia ich stylizację w sposób estetyczny i czytelny.</p>
+                <p><strong>Wybrane atrybuty HTML:</strong></p>
+                <ul>
+                    <li><code>id</code> - unikalny identyfikator elementu.</li>
+                    <li><code>class</code> - przypisanie klasy CSS do elementu.</li>
+                    <li><code>src</code>, <code>alt</code> - adres obrazu i tekst alternatywny.</li>
+                    <li><code>href</code>, <code>target</code> - adres odnośnika i sposób jego otwarcia.</li>
+                    <li><code>style</code> - inline style dla elementu.</li>
+                </ul>
+                <p><strong>Wybrane atrybuty CSS:</strong></p>
+                <ul>
+                    <li><code>color</code>, <code>background-color</code> - kolory tekstu i tła.</li>
+                    <li><code>margin</code>, <code>padding</code> - odstępy wokół elementu.</li>
+                    <li><code>font-family</code>, <code>font-size</code> - czcionka i rozmiar tekstu.</li>
+                    <li><code>border</code>, <code>box-shadow</code> - obramowanie i cień elementu.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="canvas" class="card" data-aos="fade-up" data-aos-duration="3000" data-aos-duration="3000">
+            <div class="card-header bg-warning text-white">Canvas</div>
+            <div class="card-body">
+                <h5 class="card-title">Canvas</h5>
+                <p class="card-text">Canvas to element HTML5 umożliwiający rysowanie grafik za pomocą JavaScript. Przykład:</p>
+                <pre><code>&lt;canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"&gt;&lt;/canvas&gt;
+&lt;script&gt;
+  var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d");
+  ctx.fillStyle = "red";
+  ctx.fillRect(20, 20, 150, 75);
+&lt;/script&gt;</code></pre>
+                <p>Canvas pozwala na tworzenie dynamicznych grafik, takich jak wykresy, animacje i gry, oferując pełną kontrolę nad każdym pikselem obrazu.</p>
+                <p><strong>Wybrane atrybuty Canvas:</strong></p>
+                <ul>
+                    <li><code>width</code>, <code>height</code> - szerokość i wysokość obszaru rysowania.</li>
+                    <li><code>fillStyle</code> - kolor wypełnienia.</li>
+                    <li><code>strokeStyle</code> - kolor obramowania.</li>
+                    <li><code>lineWidth</code> - grubość linii.</li>
+                    <li><code>font</code>, <code>textAlign</code> - styl tekstu i wyrównanie.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="js" class="card" data-aos="fade-up" data-aos-duration="3000">
+            <div class="card-header bg-danger text-white">Podstawy JavaScript</div>
+            <div class="card-body">
+                <h5 class="card-title">Przykłady w JavaScript</h5>
+                <p class="card-text">JavaScript pozwala na dodawanie interaktywności do stron internetowych. Poniżej znajdziesz kilka przykładów zastosowania:</p>
+
+                <h6>Zegar</h6>
+                <pre><code>&lt;script&gt;
+  function showTime() {
+    const date = new Date();
+    document.getElementById("clock").innerText = date.toLocaleTimeString();
+    setTimeout(showTime, 1000);
+  }
+  window.onload = showTime;
+&lt;/script&gt;
+&lt;div id="clock" style="font-size: 24px; font-weight: bold;"&gt;&lt;/div&gt;</code></pre>
+
+                <h6>Operatory matematyczne</h6>
+                <pre><code>&lt;script&gt;
+  const a = 10, b = 5;
+  console.log("Dodawanie: ", a + b);
+  console.log("Odejmowanie: ", a - b);
+  console.log("Mnożenie: ", a * b);
+  console.log("Dzielenie: ", a / b);
+&lt;/script&gt;</code></pre>
+
+                <h6>Slider</h6>
+                <pre><code>&lt;input type="range" id="slider" min="0" max="100" oninput="updateValue(this.value)"&gt;
+&lt;span id="sliderValue"&gt;50&lt;/span&gt;
+&lt;script&gt;
+  function updateValue(val) {
+    document.getElementById("sliderValue").innerText = val;
+  }
+&lt;/script&gt;</code></pre>
+
+                <h6>Progress Bar</h6>
+                <pre><code>&lt;progress id="progressBar" value="50" max="100"&gt;&lt;/progress&gt;
+&lt;button onclick="increaseProgress()"&gt;Zwiększ&lt;/button&gt;
+&lt;script&gt;
+  function increaseProgress() {
+    const bar = document.getElementById("progressBar");
+    if (bar.value < bar.max) {
+      bar.value += 10;
+    }
+  }
+&lt;/script&gt;</code></pre>
+
+                <h6>addEventListener</h6>
+                <p>Funkcja <code>addEventListener</code> pozwala przypisać zdarzenia do elementów w sposób dynamiczny:</p>
+                <pre><code>&lt;button id="myButton"&gt;Kliknij mnie&lt;/button&gt;
+&lt;script&gt;
+  document.getElementById("myButton").addEventListener("click", function() {
+    alert("Przycisk został kliknięty!");
+  });
+&lt;/script&gt;</code></pre>
+
+                <h6>Popover w HTML</h6>
+                <p>Popover to interaktywny element Bootstrap do wyświetlania treści po najechaniu lub kliknięciu:</p>
+                <pre><code>&lt;button type="button" class="btn btn-secondary" data-bs-toggle="popover" data-bs-content="Treść popovera"&gt;Pokaż Popover&lt;/button&gt;
+&lt;script&gt;
+  var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+  var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+    return new bootstrap.Popover(popoverTriggerEl);
+  });
+&lt;/script&gt;</code></pre>
+            </div>
+        </section>
+
+        <section id="php" class="card" data-aos="fade-up" data-aos-duration="3000">
+            <div class="card-header bg-info text-white">Podstawy PHP</div>
+            <div class="card-body">
+                <h5 class="card-title">Przykłady w PHP</h5>
+                <p class="card-text">PHP to język skryptowy do tworzenia dynamicznych stron WWW. Przykład:</p>
+                <pre><code>&lt;?php
+  $servername = "localhost";
+  $username = "root";
+  $password = "";
+  $dbname = "moja_baza";
+
+  $conn = new mysqli($servername, $username, $password, $dbname);
+
+  if ($conn-&gt;connect_error) {
+    die("Błąd połączenia: " . $conn-&gt;connect_error);
+  }
+
+  $sql = "SELECT id, nazwa FROM produkty";
+  $result = $conn-&gt;query($sql);
+
+  if ($result-&gt;num_rows &gt; 0) {
+    while($row = $result-&gt;fetch_assoc()) {
+      echo "ID: " . $row["id"]. " - Nazwa: " . $row["nazwa"]. "&lt;br&gt;";
+    }
+  } else {
+    echo "Brak wyników";
+  }
+
+  $conn-&gt;close();
+?&gt;</code></pre>
+            </div>
+        </section>
+    </div>
+    <br>
+    <br>
+    <br>
+
+<footer class="footer fixed-bottom bg-dark text-white text-center py-2">
+    <p class="mb-0">&copy; 2024 Autor: Artur Komorowski 3i2T</p>
+</footer>
+<button id="toggleDarkMode">🌙</button>
+    <script>
+        const toggleButton = document.getElementById('toggleDarkMode');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            if (document.body.classList.contains('dark-mode')) {
+                toggleButton.textContent = '☀️'; 
+            } else {
+                toggleButton.textContent = '🌙'; 
+            }
+        });
+    </script>
+<script>
+    AOS.init();
+  </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
